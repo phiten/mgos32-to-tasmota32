@@ -5,6 +5,8 @@
 
 #GNU General Public License v3.0 see LICENSE
 
+mkdir output
+
 tasmota_version=$(curl --silent "https://api.github.com/repos/arendst/Tasmota/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
 curl -o build-files/tasmota32.bin http://ota.tasmota.com/tasmota32/release/tasmota32.bin
@@ -76,7 +78,7 @@ zip -0 mgos32-to-tasmota32-$shelly_device.zip manifest.json $app_file $boot_file
 mv mgos32-to-tasmota32-$shelly_device.zip ../output/
 cd ..
 
-printf "\nDone\n\n"
+printf "\nDone mgos32-to-tasmota32-$shelly_device.zip\n\n"
 
 } 
 
