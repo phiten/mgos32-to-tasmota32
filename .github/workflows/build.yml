@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build firmware
-      run: bash ./build-script/build-zip.sh
+      run: bash ./build-zip.sh
     - name: Display files
       run: ls -R ./*
     - name: setenv release tag
