@@ -1,4 +1,4 @@
-name: RF433 window sensor
+name: Shelly to Tasmota OTA convert
 
 on:
   workflow_dispatch:  # Manually start a workflow
