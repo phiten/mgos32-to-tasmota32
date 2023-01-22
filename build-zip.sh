@@ -9,18 +9,20 @@ mkdir output
 
 tasmota_version=$(curl --silent "https://api.github.com/repos/arendst/Tasmota/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
-curl -o build-files/tasmota32.bin http://ota.tasmota.com/tasmota32/release/tasmota32.bin
-curl -o build-files/tasmota32solo1.bin http://ota.tasmota.com/tasmota32/release/tasmota32solo1.bin
+#Skip download until next release
+
+#curl -o build-files/tasmota32.bin http://ota.tasmota.com/tasmota32/release/tasmota32.bin
+#curl -o build-files/tasmota32solo1.bin http://ota.tasmota.com/tasmota32/release/tasmota32solo1.bin
 
 generatezip () {
 
 shelly_device=$1
 app_file=$2
+fs_file=$3
 
 #General:
 
 boot_file="bootloader-tasmota.bin"
-fs_file="fs-tasmota.img"
 otadata_file="otadata-tasmota.bin"
 partition_file="partition-table-tasmota.bin"
 
@@ -44,7 +46,7 @@ partition_file_size=$(wc -c build-files/$partition_file | awk '{print $1}')
 partition_file_cs1=$(shasum -a1 build-files/$partition_file | awk '{print $1}')
 partition_file_cs256=$(shasum -a256 build-files/$partition_file | awk '{print $1}')
 
-JSON_STRING2=$( jq -n \
+JSON_STRING=$( jq -n \
                     --arg name "$shelly_device" \
                     --arg version "$tasmota_version" \
                     --arg build_id "$build_id/tasmota-$tasmota_version" \
@@ -69,9 +71,9 @@ JSON_STRING2=$( jq -n \
                     --argjson partition_file_size $partition_file_size \
                     --arg partition_cs_sha1 "$partition_file_cs1" \
                     --arg partition_cs_sha256 "$partition_file_cs256" \
-'{ "name" : $name, "platform" : "esp32", "version" : $version, "build_id" : $build_id, "build_timestamp" : $build_timestamp, "parts": { "app": { "type": "app", "src": $app_file, "size": $app_file_size, "cs_sha1" : $app_cs_sha1, "cs_sha256" : $app_cs_sha256, "encrypt": true, "ptn": "app_0"}, "boot": { "type": "boot", "src": $boot_file, "addr": 4096, "size": $boot_file_size, "cs_sha1" : $boot_cs_sha1, "cs_sha256": $boot_cs_sha256, "encrypt": true, "update": false }, "fs": { "type": "fs", "src": $fs_file, "size": $fs_file_size, "cs_sha1": $fs_cs_sha1, "cs_sha256": $fs_cs_sha256, "fs_size": $fs_file_size, "encrypt": true, "ptn": "fs_1" }, "nvs": { "type": "nvs", "size": 16384, "fill": 255, "ptn": "nvs" }, "otadata": { "type": "otadata", "src": $otadata_file, "size": $otadata_file_size, "cs_sha1": $otadata_cs_sha1, "cs_sha256": $otadata_cs_sha256, "encrypt": true, "ptn": "otadata"}, "pt": { "type": "pt", "src": $partition_file, "addr": 32768, "size": $partition_file_size, "cs_sha1": $partition_cs_sha1, "cs_sha256": $partition_cs_sha256, "encrypt": true }}}')
+'{ "name" : $name, "platform" : "esp32", "version" : $version, "build_id" : $build_id, "build_timestamp" : $build_timestamp, "parts": { "app": { "type": "app", "src": $app_file, "size": $app_file_size, "cs_sha1" : $app_cs_sha1, "cs_sha256" : $app_cs_sha256, "encrypt": true, "ptn": "app_0"}, "boot": { "type": "boot", "src": $boot_file, "addr": 4096, "size": $boot_file_size, "cs_sha1" : $boot_cs_sha1, "cs_sha256": $boot_cs_sha256, "encrypt": true, "update": true }, "fs": { "type": "fs", "src": $fs_file, "size": $fs_file_size, "cs_sha1": $fs_cs_sha1, "cs_sha256": $fs_cs_sha256, "fs_size": $fs_file_size, "encrypt": true, "ptn": "fs_1" }, "nvs": { "type": "nvs", "size": 16384, "fill": 255, "ptn": "nvs" }, "otadata": { "type": "otadata", "src": $otadata_file, "size": $otadata_file_size, "cs_sha1": $otadata_cs_sha1, "cs_sha256": $otadata_cs_sha256, "encrypt": true, "ptn": "otadata"}, "pt": { "type": "pt", "src": $partition_file, "addr": 32768, "size": $partition_file_size, "cs_sha1": $partition_cs_sha1, "cs_sha256": $partition_cs_sha256, "encrypt": true }}}')
 
-printf "$JSON_STRING2" > build-files/manifest.json
+printf "$JSON_STRING" > build-files/manifest.json
 
 cd build-files
 zip -0 mgos32-to-tasmota32-$shelly_device.zip manifest.json $app_file $boot_file $fs_file $otadata_file $partition_file
@@ -85,11 +87,19 @@ printf "\nDone mgos32-to-tasmota32-$shelly_device.zip\n\n"
 ShellyPlus=( PlusHT PlusPlugS PlusPlugIT PlusPlugUS PlusPlugUK PlusI4 PlusWallDimmer Plus1PM Plus1 Plus2 )
 for i in "${ShellyPlus[@]}"
 do
-    generatezip $i "tasmota32solo1.bin"
+    generatezip $i "tasmota32solo1.bin" "fs-4MB-tasmota.img"
 done
 
-ShellyPro=( Pro1 Pro1PM Pro2 Pro2PM Pro3 Pro4PM Pro3EM )
-for i in "${ShellyPro[@]}"
-do
-    generatezip $i "tasmota32.bin"
-done
+# Skip currently unsupported/untested devices
+
+#ShellyPro8MB=( Pro1 Pro1PM Pro2 Pro2PM Pro3 Pro4PM )
+#for i in "${ShellyPro8MB[@]}"
+#do
+#    generatezip $i "tasmota32.bin" "fs-8MB-tasmota.img"
+#done
+
+#ShellyPro16MB=( Pro3EM )
+#for i in "${ShellyPro16MB[@]}"
+#do
+#    generatezip $i "tasmota32.bin" "fs-16MB-tasmota.img"
+#done
