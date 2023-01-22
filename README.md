@@ -11,16 +11,17 @@ This guide is designed to help users of Shelly Plus and Pro ESP32 devices to upd
 
 ### Short
 
-1.  Connect your Shelly device to wifi/LAN with internet access.
-2.  Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the prepared http link, then click Upload Firmware.
-3.  Wait for the device to finish updating, then connect to its new Tasmota AP.
-4.  **Optional**: Use Berry Console to download Shelly Factory Calibration files (`shelly.bin` and `aux.bin`) and save them on your PC.
-5.  Increase File System (FS) to max using Partition Wizard's Menu Entry > Increase FS to max.
-6.  Upload `Partiton_wizard.tapp` & `Partitions_update.be` to Berry Console, import `Partitions_update.be` & restart device.
-7.  Start Safeboot Conversion process in Partition Wizard (perform OTA Tasmota upgrade if not possible, then try again).
-8.  Restore Partition FS to original size (320kB) using Partition Wizard if desired.
-9.  Find calibration data in `shelly.bin` around 0x1000.
-10.  Finally, configure device using [templates here](https://templates.blakadder.com/search.html).
+1. Connect your Shelly device to wifi/LAN with internet access.
+2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the prepared http link, then click Upload Firmware.
+3. Wait for the device to finish updating, then connect to its new Tasmota AP.
+4. Check that the files `shelly.bin` and `aux.bin` have been generated. Use `import Shelly_data` in Berry Console to generate them.
+5. ***MANDATORY*** Download **ALL** files in the file system to your PC.
+6. Increase File System (FS) to max using Partition Wizard's Menu Entry > Increase FS to max.
+7. Upload `Partiton_wizard.tapp` & `Partitions_update.be` from Step 5. to the Tasmota FS, in Berry type `import Partitions_update.be` & restart device.
+8. Start Safeboot Conversion process in Partition Wizard (perform OTA Tasmota upgrade if not possible, then try again).
+9. Restore Partition FS to original size (320kB) using Partition Wizard if desired.
+10. Find calibration data in `shelly.bin` around 0x1000.
+11. Finally, configure device using [templates here](https://templates.blakadder.com/search.html).
 
 ### Detailed
 
@@ -28,14 +29,15 @@ This guide is designed to help users of Shelly Plus and Pro ESP32 devices to upd
 2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the previously prepared http link. 
 3. Click the **Upload Firmware** button.
 4. Wait for the device to finish updating.
-5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. 
-6. ***Optional*** **Shelly Factory Calibration Download:** Check that the files `shelly.bin` and `aux.bin` have been generated in the File System (FS). If not, type `import Shelly_data` into the Berry Console and hit Return twice. This will save the device-specific data in these two files. ***Mandatory*** Remember to save all the files onto a PC.
-7. Open the Partition Wizard -> Menu Entry. Choose **Increase FS to max** and click the corresponding button. This will increase the FS and erase anything that is currently present in it.
-8. Upload `Partiton_wizard.tapp` and `Partitions_update.be` to the Tasmota FS. Inside the Berry Console, type `import Partitions_update.be` and hit Return twice. Afterwards, restart the device.
-9. Open the Partition Wizard and start the Safeboot Conversion process. If it is not possible to start due to something is marked in red, then an OTA Tasmota upgrade is needed. Perform the upgrade, and the Safeboot Conversion process can then be started.
-10. The size of the Partition FS is now larger than the default size. If desired, the default 320kB size can be restored using the Partition Wizard.
-11. To complete the Tasmota setup, search for the needed calibration data in the `shelly.bin` file. This data should be located around 0x1000.
-12. Now you can configure your device. You can find templates for your device [here](https://templates.blakadder.com/search.html). 
+5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network.
+6. Check that the files `shelly.bin` and `aux.bin` have been generated in the File System (FS). If not, type `import Shelly_data` into the Berry Console and hit Return twice. This will save the device-specific data in these two files. Remember to save the files onto a PC.
+7. ***MANDATORY*** Download **ALL** files in the file system to your PC.
+8. Open the Partition Wizard -> Menu Entry. Choose **Increase FS to max** and click the corresponding button. This will increase the FS and erase anything that is currently present in it.
+9. Upload the in Step 7. downloaded `Partiton_wizard.tapp` and `Partitions_update.be` to the Tasmota FS. Inside the Berry Console, type `import Partitions_update.be` and hit Return twice. Afterwards, restart the device.
+10. Open the Partition Wizard and start the Safeboot Conversion process. If it is not possible to start due to something is marked in red, then an OTA Tasmota upgrade is needed. Perform the upgrade, and the Safeboot Conversion process can then be started.
+11. The size of the Partition FS is now larger than the default size. If desired, the default 320kB size can be restored using the Partition Wizard.
+12. To complete the Tasmota setup, search for the needed calibration data in the `shelly.bin` file. This data should be located around 0x1000.
+13. Now you can configure your device. You can find templates for your device [here](https://templates.blakadder.com/search.html). 
 
 ## Supported Devices and OTA Links
 
