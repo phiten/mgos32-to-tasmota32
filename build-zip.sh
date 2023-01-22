@@ -84,7 +84,7 @@ printf "\nDone mgos32-to-tasmota32-$shelly_device.zip\n\n"
 
 } 
 
-ShellyPlus=( PlusHT PlusPlugS PlusPlugIT PlusPlugUS PlusPlugUK PlusI4 PlusWallDimmer Plus1PM Plus1 Plus2 )
+ShellyPlus=( PlusHT PlusPlugS PlusPlugIT PlusPlugUS PlusPlugUK PlusI4 PlusWallDimmer Plus1PM Plus1 Plus2PM )
 for i in "${ShellyPlus[@]}"
 do
     generatezip $i "tasmota32solo1.bin" "fs-4MB-tasmota.img"
