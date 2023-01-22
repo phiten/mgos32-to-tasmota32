@@ -37,16 +37,16 @@ This guide is designed to help users of Shelly Plus and Pro ESP32 devices to upd
 
 | **Device** | **Link** | **State** |
 |------|------|------|
-| **PlusHT** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusHT.zip `   |   :warning:**untested**   |
-| **PlusPlugS** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugS.zip `   |   :warning:**untested**   |
-| **PlusPlugIT** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugIT.zip `   |   :warning:**untested**   |
-| **PlusPlugUS** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugUS.zip `   |   :warning:**untested**   |
-| **PlusPlugUK** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugUK.zip `   |   :warning:**untested**   |
-| **PlusI4** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusI4.zip `   |   :warning:**untested**   |
-| **PlusWallDimmer** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusWallDimmer.zip `   |   :warning:**untested**   |
-| **Plus1PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus1PM.zip `   |   :white_check_mark:**tested**   |
-| **Plus1** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus1.zip `   |   :warning:**untested**   |
-| **Plus2** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus2.zip `   |   :warning:**untested**   |
+| **PlusHT** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusHT.zip`   |   :warning:**untested**   |
+| **PlusPlugS** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugS.zip`   |   :warning:**untested**   |
+| **PlusPlugIT** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugIT.zip`   |   :warning:**untested**   |
+| **PlusPlugUS** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugUS.zip`   |   :warning:**untested**   |
+| **PlusPlugUK** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugUK.zip`   |   :warning:**untested**   |
+| **PlusI4** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusI4.zip`   |   :warning:**untested**   |
+| **PlusWallDimmer** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusWallDimmer.zip`   |   :warning:**untested**   |
+| **Plus1PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus1PM.zip`   |   :white_check_mark:**tested**   |
+| **Plus1** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus1.zip`   |   :warning:**untested**   |
+| **Plus2PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus2PM.zip`   |   :warning:**untested**   |
 
 ### If you confirmed an **untested** device working please open an issue!
 
