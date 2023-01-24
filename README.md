@@ -6,7 +6,7 @@ This guide is designed to help users of Shelly Plus and Pro ESP32 devices to upd
 
 This application provides generally safe updates to devices over the air (OTA). 
 
-However, it is important to understand that overwriting the boot loader via an OTA update is a risky operation. If something unexpected fails during the update, it may render the device inoperable, resulting in a "bricked" device.
+However, it is important to understand that overwriting the boot loader via an OTA update is a risky operation. If something unexpected fails during the update, it may render the device inoperable until serial flash.
 
 If this happens, you need to know how to flash a new firmware over a wired connection in order to recover the device.
 
