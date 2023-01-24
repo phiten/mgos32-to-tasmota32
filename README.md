@@ -2,6 +2,14 @@
 
 This guide is designed to help users of Shelly Plus and Pro ESP32 devices to update their devices from the Mongoose OS firmware to the Tasmota firmware over the air (OTA).
 
+## WARNING :warning:
+
+This application provides generally safe updates to devices over the air (OTA). 
+
+However, it is important to understand that overwriting the boot loader via an OTA update is a risky operation. If something unexpected fails during the update, it may render the device inoperable, resulting in a "bricked" device.
+
+If this happens, the user needs to know how to flash a new firmware over a wired connection in order to recover the device.
+
 ## Prerequisites
 
 1. Your Shelly device must have Mongoose OS firmware version 0.12.0 or higher installed.
