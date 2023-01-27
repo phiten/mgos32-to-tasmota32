@@ -23,7 +23,7 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the previously prepared http link. 
 3. Click the **Upload Firmware** button.
 4. Wait for the device to finish updating.
-5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network.
+5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. If Shelly OS (Mongoose OS) boots back up after the OTA update, please update (using the OTA link from this repo) again.
 6. Now you can configure your device. You can find templates for your device [here](https://templates.blakadder.com/search.html).
 
 ### Optional: Use factory calibration data
