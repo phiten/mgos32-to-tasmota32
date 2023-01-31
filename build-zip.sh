@@ -90,11 +90,11 @@ do
     generatezip $i "tasmota32solo1.bin" "fs-4MB-tasmota.img"
 done
 
-#ShellyPro8MB=( Pro1 Pro1PM Pro2 Pro2PM Pro3 Pro4PM )
-#for i in "${ShellyPro8MB[@]}"
-#do
-#    generatezip $i "tasmota32.bin" "fs-8MB-tasmota.img"
-#done
+ShellyPro8MB=( Pro1 Pro1PM Pro2 Pro2PM Pro3 Pro4PM )
+for i in "${ShellyPro8MB[@]}"
+do
+    generatezip $i "tasmota32.bin" "fs-8MB-tasmota.img"
+done
 
 # Skip currently unsupported/untested devices
 
