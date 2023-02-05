@@ -25,12 +25,14 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 4. Wait for the device to finish updating.
 5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. If Shelly OS (Mongoose OS) boots back up after the OTA update, please update (using the OTA link from this repo) again.
 6. Now you can configure your device. You can find templates for your device [here](https://templates.blakadder.com/search.html).
+7. If you want to use the Shelly factory calibration data follow the next steps. If not you can delete `Shelly_data.be` and `Shelly_data.tapp` from the file system which speeds up (re)boot times.
 
 ### Optional: Use factory calibration data
 
 1. Check that the files `shelly.bin` and `aux.bin` have been generated in the file system (FS). If not, type `import Shelly_data` into the Berry Console and hit Return twice. This will save the device-specific data in these two files.
 2. Download `shelly.bin` and `aux.bin` in the file system to your PC.
 3. Find calibration data in `shelly.bin` around 0x1000 with a HEX viewer for your OS.
+4. Delete `Shelly_data.be` and `Shelly_data.tapp` from the file system
 
 ### Optional: Convert to Tasmota Safeboot 
 
