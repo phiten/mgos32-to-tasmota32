@@ -64,6 +64,8 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 | **Pro3** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro3.zip`   |   :warning:**untested**   |
 | **Pro4PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro4PM.zip`   |   :white_check_mark:**tested**   |
 
+##### Pro4PM is build with LVGL support
+
 ### If you confirmed an **untested** device working please open an issue!
 
 ## What if my device is not listed?

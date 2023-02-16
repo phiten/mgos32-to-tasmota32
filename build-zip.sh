@@ -9,10 +9,9 @@ mkdir output
 
 tasmota_version=$(curl --silent "https://api.github.com/repos/arendst/Tasmota/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
-#Skip download until next release
-
-#curl -o build-files/tasmota32.bin http://ota.tasmota.com/tasmota32/release/tasmota32.bin
-#curl -o build-files/tasmota32solo1.bin http://ota.tasmota.com/tasmota32/release/tasmota32solo1.bin
+curl -o build-files/tasmota32.bin http://ota.tasmota.com/tasmota32/release/tasmota32.bin
+curl -o build-files/tasmota32solo1.bin http://ota.tasmota.com/tasmota32/release/tasmota32solo1.bin
+curl -o build-files/tasmota32-lvgl.bin http://ota.tasmota.com/tasmota32/release/tasmota32-lvgl.bin
 
 generatezip () {
 
@@ -90,10 +89,16 @@ do
     generatezip $i "tasmota32solo1.bin" "fs-4MB-tasmota.img"
 done
 
-ShellyPro8MB=( Pro1 Pro1PM Pro2 Pro2PM Pro3 Pro4PM )
+ShellyPro8MB=( Pro1 Pro1PM Pro2 Pro2PM Pro3 )
 for i in "${ShellyPro8MB[@]}"
 do
     generatezip $i "tasmota32.bin" "fs-8MB-tasmota.img"
+done
+
+ShellyPro8MBlvgl=( Pro4PM )
+for i in "${ShellyPro8MBlvgl[@]}"
+do
+    generatezip $i "tasmota32-lvgl.bin" "fs-8MB-tasmota.img"
 done
 
 # Skip currently unsupported/untested devices
