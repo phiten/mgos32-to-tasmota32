@@ -57,7 +57,7 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 | **Plus1PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus1PM.zip`   |   :white_check_mark:**tested**   |
 | **Plus1** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus1.zip`   |   :white_check_mark:**tested**   |
 | **Plus2PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus2PM.zip`   |   :white_check_mark:**tested**   |
-| **Pro1** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro1.zip`   |   :warning:**untested**   |
+| **Pro1** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro1.zip`   |   :white_check_mark:**tested**   |
 | **Pro1PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro1PM.zip`   |   :warning:**untested**   |
 | **Pro2** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro2.zip`   |   :warning:**untested**   |
 | **Pro2PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro2PM.zip`   |   :white_check_mark:**tested**   |
