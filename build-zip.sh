@@ -83,7 +83,7 @@ printf "\nDone mgos32-to-tasmota32-$shelly_device.zip\n\n"
 
 } 
 
-ShellyPlus=( PlusHT PlusPlugS PlusPlugIT PlusPlugUS PlusPlugUK PlusI4 PlusWallDimmer Plus1PM Plus1 Plus2PM )
+ShellyPlus=( PlusHT PlusPlugS PlugIT PlugUS PlugUK PlusI4 PlusWallDimmer Plus1PM Plus1 Plus2PM )
 for i in "${ShellyPlus[@]}"
 do
     generatezip $i "tasmota32solo1.bin" "fs-4MB-tasmota.img"
@@ -101,10 +101,8 @@ do
     generatezip $i "tasmota32-lvgl.bin" "fs-8MB-tasmota.img"
 done
 
-# Skip currently unsupported/untested devices
-
-#ShellyPro16MB=( Pro3EM )
-#for i in "${ShellyPro16MB[@]}"
-#do
-#    generatezip $i "tasmota32.bin" "fs-16MB-tasmota.img"
-#done
+ShellyPro16MB=( Pro3EM )
+for i in "${ShellyPro16MB[@]}"
+do
+    generatezip $i "tasmota32.bin" "fs-16MB-tasmota.img"
+done
