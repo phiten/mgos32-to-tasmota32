@@ -1,3 +1,6 @@
+## Currently under rework, will be back soon
+
+
 # Updating Shelly Firmware from Mongoose OS to Tasmota
 
 This guide is designed to help users of Shelly Plus and Pro ESP32 devices to update their devices from the Mongoose OS firmware to the Tasmota firmware over the air (OTA).
