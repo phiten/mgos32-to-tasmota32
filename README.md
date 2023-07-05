@@ -1,4 +1,4 @@
-## Currently under rework, will be back soon
+# Currently under rework, will be back soon
 
 
 # Updating Shelly Firmware from Mongoose OS to Tasmota
