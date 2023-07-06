@@ -18,7 +18,7 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 
 ## Process
 
-### Replace Shelly with Tasmota firmware
+### Replace Shelly with Tasmota32 v12.5.0 firmware
 
 1. Connect your Shelly device to your local wifi or LAN with an internet connection.
 2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the previously prepared http link. 
