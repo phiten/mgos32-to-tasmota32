@@ -1,6 +1,7 @@
-# Updating Shelly Firmware from Mongoose OS to Tasmota
 
-This guide is designed to help users of Shelly Plus and Pro ESP32 devices to update their devices from the Mongoose OS firmware to the Tasmota firmware over the air (OTA).
+# Shelly convert to Tasmota
+
+This guide is designed to help users of Shelly Plus and Pro ESP32 devices to update their devices from the Mongoose OS to the Tasmota firmware over the air (OTA).
 
 ## WARNING :warning:
 
@@ -17,31 +18,20 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 
 ## Process
 
-### Conversion
+### Replace Shelly with Tasmota32 v12.5.0 firmware
 
 1. Connect your Shelly device to your local wifi or LAN with an internet connection.
 2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the previously prepared http link. 
 3. Click the **Upload Firmware** button.
 4. Wait for the device to finish updating.
-5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. If Shelly OS (Mongoose OS) boots back up after the OTA update, please update (using the OTA link from this repo) again.
-6. Now you can configure your device. You can find templates for your device [here](https://templates.blakadder.com/search.html).
-7. If you want to use the Shelly factory calibration data follow the next steps. If not you can delete `Shelly_data.be` and `Shelly_data.tapp` from the file system which speeds up (re)boot times.
+5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. If Shelly OS (Mongoose OS) boots back up after the OTA update, please update using the OTA link again.
 
-### Optional: Use factory calibration data
+### Convert to Tasmota Safeboot 
 
-1. Check that the files `shelly.bin` and `aux.bin` have been generated in the file system (FS). If not, type `import Shelly_data` into the Berry Console and hit Return twice. This will save the device-specific data in these two files.
-2. Download `shelly.bin` and `aux.bin` in the file system to your PC.
-3. Find calibration data in `shelly.bin` around 0x1000 with a HEX viewer for your OS.
-4. Delete `Shelly_data.be` and `Shelly_data.tapp` from the file system
-
-### Optional: Convert to Tasmota Safeboot 
-
-1. ***MANDATORY*** Download **ALL** files in the file system to your PC.
-2. Open the Partition Wizard -> Menu Entry. Choose **Increase FS to max** and click the corresponding button. This will increase the FS and erase anything that is currently present in it.
-3. Upload the in Step 1. downloaded `Partiton_wizard.tapp` and `Partitions_update.be` to the Tasmota FS. Inside the Berry Console, type `import Partitions_update.be` and hit Return twice. Afterwards, restart the device.
-4. Open the Partition Wizard and start the Safeboot Conversion process. If it is not possible to start due to something is marked in red, then an OTA Tasmota upgrade is needed. Perform the upgrade, and the Safeboot Conversion process can then be started.
-5. The size of the Partition FS is now larger than the default size. If desired, the default 320kB size can be restored using the Partition Wizard.
-6. Finally, configure device using [templates here](https://templates.blakadder.com/search.html).
+1. Open the Partition Wizard and start the Safeboot Conversion process. If it is not possible to start due to something is marked in red, then an OTA Tasmota upgrade is needed again with **v12.5**. The OTA URL is `http://ota.tasmota.com/tasmota32/release-12.5.0/tasmota32solo1.bin`. Perform the upgrade, and the Safeboot Conversion process can then be started. The conversion will update to latest Tasmota version too.
+2. The size of the Partition FS is maybe different than the default size. Use Partition Wizard to adjust the FS size.
+3. Finally, configure device using [templates here](https://templates.blakadder.com/search.html).
+4. Now you can update to the Tasmota32 version you need via OTA or by file upload.
 
 ## Supported Devices and OTA Links
 

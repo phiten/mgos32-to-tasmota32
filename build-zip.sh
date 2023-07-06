@@ -9,9 +9,9 @@ mkdir output
 
 tasmota_version=$(curl --silent "https://api.github.com/repos/arendst/Tasmota/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
-curl -o build-files/tasmota32.bin http://ota.tasmota.com/tasmota32/release/tasmota32.bin
-curl -o build-files/tasmota32solo1.bin http://ota.tasmota.com/tasmota32/release/tasmota32solo1.bin
-curl -o build-files/tasmota32-lvgl.bin http://ota.tasmota.com/tasmota32/release/tasmota32-lvgl.bin
+curl -o build-files/tasmota32.bin http://ota.tasmota.com/tasmota32/release-12.5.0/tasmota32.bin
+curl -o build-files/tasmota32solo1.bin http://ota.tasmota.com/tasmota32/release-12.5.0/tasmota32solo1.bin
+curl -o build-files/tasmota32-lvgl.bin http://ota.tasmota.com/tasmota32/release-12.5.0/tasmota32-lvgl.bin
 
 generatezip () {
 
