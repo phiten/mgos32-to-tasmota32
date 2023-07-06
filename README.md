@@ -28,10 +28,10 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 
 ### Convert to Tasmota Safeboot 
 
-1. Open the Partition Wizard and start the Safeboot Conversion process. If it is not possible to start due to something is marked in red, then an OTA Tasmota upgrade is needed again with **v12.5**. The OTA URL is `http://ota.tasmota.com/tasmota32/release-12.5.0/tasmota32solo1.bin`. Perform the upgrade, and the Safeboot Conversion process can then be started.
+1. Open the Partition Wizard and start the Safeboot Conversion process. If it is not possible to start due to something is marked in red, then an OTA Tasmota upgrade is needed again with **v12.5**. The OTA URL is `http://ota.tasmota.com/tasmota32/release-12.5.0/tasmota32solo1.bin`. Perform the upgrade, and the Safeboot Conversion process can then be started. The conversion will update to latest Tasmota version too.
 2. The size of the Partition FS is different than the default size. If desired, the default 320kB size can be restored using the Partition Wizard.
 3. Finally, configure device using [templates here](https://templates.blakadder.com/search.html).
-4. Now you can update Tasmota to the latest Tasmota32 version you need via OTA or by file upload.
+4. Now you can update to the Tasmota32 version you need via OTA or by file upload.
 
 ## Supported Devices and OTA Links
 
