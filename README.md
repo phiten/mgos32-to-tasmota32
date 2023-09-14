@@ -13,7 +13,7 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 
 ## Prerequisites
 
-1. Your Shelly device must have Mongoose OS firmware version 0.12.0 or higher installed.
+1. Your Shelly device should have an actual firmware installed. If OTA fails to Tasmota. Update!
 2. You must have the mgos32-to-tasmota32 firmware http link for your device copied from the table below.
 
 ## Process
