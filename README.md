@@ -26,12 +26,11 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 4. Wait for the device to finish updating.
 5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. If Shelly OS (Mongoose OS) boots back up after the OTA update, please update using the OTA link again.
 
-### Convert to Tasmota Safeboot 
+### !!! NEEDED !!! Convert to Tasmota Safeboot and update to latest Tasmota release
 
-1. Open the Partition Wizard and start the Safeboot Conversion process. If it is not possible to start due to something is marked in red, then an OTA Tasmota upgrade is needed again with **v12.5**. The OTA URL is `http://ota.tasmota.com/tasmota32/release-12.5.0/tasmota32solo1.bin`. Perform the upgrade, and the Safeboot Conversion process can then be started. The conversion will update to latest Tasmota version too.
-2. The size of the Partition FS is maybe different than the default size. Use Partition Wizard to adjust the FS size.
-3. Finally, configure device using [templates here](https://templates.blakadder.com/search.html).
-4. Now you can update to the Tasmota32 version you need via OTA or by file upload.
+1. Configure device using Tasmota Auto configuration. Select your device and hit enter. Wait until device is online again.
+2. Open the Partition Wizard and start the Safeboot Conversion process. The conversion will update to latest Tasmota version too.
+3. The size of the Partition FS is maybe different than the default size. Use Partition Wizard to adjust the FS size.
 
 ## Supported Devices and OTA Links
 
