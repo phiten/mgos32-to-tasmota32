@@ -32,7 +32,7 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 2. Wait until device is online again. Takes a few seconds
 3. Open the Partition Wizard and start the Safeboot Conversion process. The conversion will update to latest Tasmota version too.
 4. Wait until device is online again. Takes 3 - 5 minutes
-5. The size of the Partition FS is maybe different than the default size. Use Partition Wizard to adjust the FS size.
+5. The size of the Partition FS is maybe different than the default size. Use Partition Wizard to adjust the FS size. This removes all obsolete files too.
 
 ## Supported Devices and OTA Links
 
