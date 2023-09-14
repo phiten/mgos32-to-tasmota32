@@ -28,9 +28,10 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 
 ### !!! NEEDED !!! Convert to Tasmota Safeboot and update to latest Tasmota release
 
-1. Configure device using Tasmota Auto configuration. Select your device and hit enter. Wait until device is online again.
-2. Open the Partition Wizard and start the Safeboot Conversion process. The conversion will update to latest Tasmota version too.
-3. The size of the Partition FS is maybe different than the default size. Use Partition Wizard to adjust the FS size.
+1. Configure device using Tasmota Auto configuration. Select your device and hit enter. **This replaces the locked bootloader** (without this step the device gets bricked with next firmware update)
+2. Wait until device is online again. Takes 3 - 5 minutes
+3. Open the Partition Wizard and start the Safeboot Conversion process. The conversion will update to latest Tasmota version too.
+4. The size of the Partition FS is maybe different than the default size. Use Partition Wizard to adjust the FS size.
 
 ## Supported Devices and OTA Links
 
