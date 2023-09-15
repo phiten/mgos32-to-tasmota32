@@ -2,4 +2,4 @@
 
 ## WARNING :warning:
 
-Currently not fully working. Problem identified. Working on solution
+Currently not working. Can Soft brick the device. Problem identified. Working on solution
