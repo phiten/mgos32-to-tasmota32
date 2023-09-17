@@ -13,7 +13,7 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 
 ## Prerequisites
 
-1. Your Shelly device should have an actual firmware installed. If OTA fails to Tasmota. Update!
+1. Update your Shelly device to the actual firmware.
 2. You must have the mgos32-to-tasmota32 firmware http link for your device copied from the table below.
 
 ## Process
@@ -21,7 +21,7 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 ### Replace Shelly with Tasmota32 v12.5.0 firmware
 
 1. Connect your Shelly device to your local wifi or LAN with an internet connection.
-2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the previously prepared http link. 
+2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the previously prepared http link **or** download the convert zip for your device and drag & drop in the Shelly firmware update area.
 3. Click the **Upload Firmware** button.
 4. Wait for the device to finish updating.
 5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. If Shelly OS (Mongoose OS) boots back up after the OTA update, please update using the OTA link again.
