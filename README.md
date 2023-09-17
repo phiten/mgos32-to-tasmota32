@@ -26,7 +26,7 @@ If this happens, you need to know how to flash a new firmware over a wired conne
 4. Wait for the device to finish updating.
 5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. If Shelly OS (Mongoose OS) boots back up after the OTA update, please update using the OTA link again.
 
-### !!! NEEDED !!! Convert to Tasmota Safeboot and update to latest Tasmota release
+### ⚠️ NEEDED ⚠️ Convert to Tasmota Safeboot and update to latest Tasmota release
 
 1. Configure device using Tasmota Auto configuration. Select your device and hit enter. **This replaces the locked bootloader** (without this step the device gets bricked with next firmware update)
 2. Wait until device is online again. Takes a few seconds
