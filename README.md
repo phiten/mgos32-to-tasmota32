@@ -33,7 +33,7 @@ To recover a failed convert, flashing Tasmota over a wired serial connection is 
 11. Wait until device is online again. Takes 3 - 5 minutes
 12. Optional: Use Partition Wizard to increase the Filesystem size to its maximum. This removes all obsolete files too.
 
-## Supported Devices and OTA Links
+## Supported Devices
 
 | **Device** | **State** |
 |------|------|
