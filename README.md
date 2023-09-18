@@ -1,19 +1,19 @@
 
 # Shelly convert to Tasmota
 
-This guide explains how to convert Shelly ESP32 and ESP32-C3 driven devices to Tasmota via OTA (over the air).
+This guide explains how to convert Shelly ESP32 and ESP32-C3 driven devices to Tasmota
 
 ## :warning: WARNING :warning:
 
 **There is no way back to Shelly firmware if you have initiated the convert process!**
 
-The convert workflow provides a safe OTA update. However, it is a risky operation to overwrite the bootloader. If something unexpected happens, it will probably render the device inoperable until it is recovered.
-To recover a failed OTA convert, flashing Tasmota over a wired serial connection is needed.
+The convert workflow provides a safe update. However, it is a risky operation to overwrite the bootloader. If something unexpected happens, it will probably render the device inoperable until it is recovered.
+To recover a failed convert, flashing Tasmota over a wired serial connection is needed.
 
 ## Prerequisites
 
 1. Update the Shelly device to the latest firmware.
-2. Download the convert *.zip package for your device (release section)
+2. Download the convert *.zip package for your device (See release section)
 
 ## Let’s start
 
@@ -25,7 +25,7 @@ To recover a failed OTA convert, flashing Tasmota over a wired serial connection
 4. Wait for the device to finish updating.
 5. If Shelly Web frontend is back after the update, repeat the steps above.
 6. The Web frontend does not react anymore now.
-7. Connect to the new opened Tasmota Wi-Fi access point and add the device to your Wi-Fi (Internet access). 
+7. Connect to the new opened Tasmota Wi-Fi access point and add the device to your Wi-Fi (full Internet access needed). 
 ### ⚠️ NEEDED ⚠️ Convert to Tasmota Safeboot and update to latest Tasmota release
 8. Configure device using Tasmota Auto configuration. Select your device and hit enter. **This replaces the locked bootloader** (without this step device gets bricked with next firmware update).
 9. Wait until device is online again. Takes a few seconds
