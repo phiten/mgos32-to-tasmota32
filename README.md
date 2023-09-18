@@ -1,35 +1,35 @@
 
 # Shelly convert to Tasmota
 
-This guide explains how to convert Shelly ESP32 and ESP32-C3 driven devices to Tasmota over the air (OTA).
+This guide explains how to convert Shelly ESP32 and ESP32-C3 driven devices to Tasmota OTA (over the air).
 
 ## WARNING :warning:
 
-**There is no way back to Shelly firmware if you have started the convert process!**
+**There is no way back to Shelly firmware if you have initiated the convert process!**
 
-This application provides generally safe updates to devices over the air (OTA). 
-However, it is important to understand that overwriting the boot loader via an OTA update is a risky operation. If something unexpected fails during the update, it may render the device inoperable until serial flash.
-
-If this happens, you need to know how to flash a new firmware over a wired connection in order to recover the device.
+The convert workflow provides a safe OTA update. However, it is a risky operation to overwrite the bootloader. If something unexpected happens, it will probably render the device inoperable until it is recovered.
+To recover a failed OTA convert, flashing Tasmota over a wired serial connection needs to be done.
 
 ## Prerequisites
 
-1. Update your Shelly device to the actual firmware.
-2. You must have the mgos32-to-tasmota32 firmware http link for your device copied from the table below.
+1. Update your Shelly device to the latest firmware.
+2. You must have the `mgos32-to-tasmota32` firmware http link or the downloaded *.zip package for your device (according to the table below).
 
 ## Process
 
 ### Replace Shelly with Tasmota32 v12.5.0 firmware
 
-1. Connect your Shelly device to your local wifi or LAN with an internet connection.
-2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the previously prepared http link **or** download the convert zip for your device and drag & drop in the Shelly firmware update area.
-3. Click the **Upload Firmware** button.
+1. Connect your Shelly device to your local Wi-Fi or LAN with an internet connection.
+2. Navigate to Settings > Device Settings > Firmware > Custom Firmware and paste the previously prepared http link **or** the convert *.zip for your device. Copy the link or drag & drop the *.zip in the Shelly firmware update area.
+3. Click the **Update** button.
 4. Wait for the device to finish updating.
-5. Once the update is finished, connect to the device's new Tasmota wifi access point and add the device back to your network. If Shelly OS (Mongoose OS) boots back up after the OTA update, please update using the OTA link again.
+5. If Shelly Web frontend is back after the OTA update, repeat the steps above.
+6. The Web frontend does not react anymore.
+7. Connect to the now opened Tasmota Wi-Fi access point and add the device to your Wi-Fi. 
 
 ### ⚠️ NEEDED ⚠️ Convert to Tasmota Safeboot and update to latest Tasmota release
 
-1. Configure device using Tasmota Auto configuration. Select your device and hit enter. **This replaces the locked bootloader** (without this step the device gets bricked with next firmware update)
+1. Configure device using Tasmota Auto configuration. Select your device and hit enter. **This replaces the locked bootloader** (without this step device gets bricked with next firmware update)
 2. Wait until device is online again. Takes a few seconds
 3. Open the Partition Wizard and start the Safeboot Conversion with hitting the button "Start Migration". The conversion will update to latest Tasmota version too.
 4. Wait until device is online again. Takes 3 - 5 minutes
