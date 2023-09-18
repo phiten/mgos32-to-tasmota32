@@ -20,7 +20,7 @@ To recover a failed OTA convert, flashing Tasmota over a wired serial connection
 ### Replace Shelly with Tasmota32 v12.5.0 firmware
 
 1. Connect your Shelly device to Wi-Fi or LAN with an internet connection.
-2. Navigate to Settings > Firmware and paste the (according) http link **or** the convert *.zip in drag & drop firmware update area.
+2. Navigate to Settings > Firmware and paste the copied http link **or** the convert *.zip in the drag & drop firmware update area.
 3. Click the **Update** button.
 4. Wait for the device to finish updating.
 5. If Shelly Web frontend is back after the OTA update, repeat the steps above.
