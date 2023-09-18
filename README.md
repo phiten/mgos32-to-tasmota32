@@ -67,7 +67,7 @@ Or buy the device from my [Amazon Wishlist](https://www.amazon.de/hz/wishlist/ls
 
 ## Credits
 
-I would like to thank [Jason2866](https://github.com/Jason2866) for providing help with the custom Tasmota files.
+I would like to thank [Jason2866](https://github.com/Jason2866) for providing help with the custom Tasmota files and [s-hadinger](https://github.com/s-hadinger) for the Berry code fixing startup of Tasmota.
 
 ## License
 
