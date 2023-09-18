@@ -12,17 +12,17 @@ To recover a failed convert, flashing Tasmota over a wired serial connection is 
 
 ## Prerequisites
 
-1. Update the Shelly device to the latest firmware.
+1. Update the Shelly device to the latest firmware
 2. Download the convert *.zip package for your device (See release section)
 
 ## Let’s start
 
 ### Replace Shelly with Tasmota32 firmware
 
-1. Connect your Shelly device to Wi-Fi or LAN
-2. Navigate to Settings > Firmware and drag & drop the convert *.zip in the firmware update area.
-3. Click the **Update** button.
-4. Wait for the device to finish updating.
+1. Connect to your Shelly device via Wi-Fi or LAN
+2. Navigate to Settings > Firmware and drag & drop the convert *.zip in the firmware update area
+3. Click the **Update** button
+4. Device is updating, finished in 1-2 minutes
 5. If Shelly Web frontend is back after the update, repeat the steps above.
 6. The Web frontend does not react anymore now.
 7. Connect to the new opened Tasmota Wi-Fi access point and add the device to your Wi-Fi (full Internet access needed). 
