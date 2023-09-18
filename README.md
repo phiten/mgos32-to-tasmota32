@@ -1,12 +1,13 @@
 
 # Shelly convert to Tasmota
 
-This guide is designed to help users of Shelly Plus and Pro ESP32 devices to update their devices from the Mongoose OS to the Tasmota firmware over the air (OTA).
+This guide explains how to convert Shelly ESP32 and ESP32-C3 driven devices to Tasmota over the air (OTA).
 
 ## WARNING :warning:
 
-This application provides generally safe updates to devices over the air (OTA). 
+**There is no way back to Shelly firmware if you have started the convert process!**
 
+This application provides generally safe updates to devices over the air (OTA). 
 However, it is important to understand that overwriting the boot loader via an OTA update is a risky operation. If something unexpected fails during the update, it may render the device inoperable until serial flash.
 
 If this happens, you need to know how to flash a new firmware over a wired connection in order to recover the device.
