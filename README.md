@@ -31,7 +31,7 @@ To recover a failed OTA convert, flashing Tasmota over a wired serial connection
 9. Wait until device is online again. Takes a few seconds
 10. Open the Partition Wizard and start the Safeboot Conversion with hitting the button "Start Migration". The conversion will update to latest Tasmota version too.
 11. Wait until device is online again. Takes 3 - 5 minutes
-12. Use Partition Wizard to increase the Filesystem size to its maximum. This removes all obsolete files too.
+12. Optional: Use Partition Wizard to increase the Filesystem size to its maximum. This removes all obsolete files too.
 
 ## Supported Devices and OTA Links
 
