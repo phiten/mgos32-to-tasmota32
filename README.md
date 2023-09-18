@@ -13,19 +13,19 @@ To recover a failed OTA convert, flashing Tasmota over a wired serial connection
 ## Prerequisites
 
 1. Update the Shelly device to the latest firmware.
-2. Copy the `mgos32-to-tasmota32` firmware http link (table below) **or** download the convert *.zip package for your device (release section)
+2. Download the convert *.zip package for your device (release section)
 
 ## Let’s start
 
 ### Replace Shelly with Tasmota32 firmware
 
-1. Connect your Shelly device to Wi-Fi or LAN with an internet connection.
-2. Navigate to Settings > Firmware and paste the copied http link **or** the convert *.zip in the drag & drop firmware update area.
+1. Connect your Shelly device to Wi-Fi or LAN
+2. Navigate to Settings > Firmware and drag & drop the convert *.zip in the firmware update area.
 3. Click the **Update** button.
 4. Wait for the device to finish updating.
-5. If Shelly Web frontend is back after the OTA update, repeat the steps above.
-6. The Web frontend does not react anymore.
-7. Connect to the now opened Tasmota Wi-Fi access point and add the device to your Wi-Fi. 
+5. If Shelly Web frontend is back after the update, repeat the steps above.
+6. The Web frontend does not react anymore now.
+7. Connect to the new opened Tasmota Wi-Fi access point and add the device to your Wi-Fi (Internet access). 
 ### ⚠️ NEEDED ⚠️ Convert to Tasmota Safeboot and update to latest Tasmota release
 8. Configure device using Tasmota Auto configuration. Select your device and hit enter. **This replaces the locked bootloader** (without this step device gets bricked with next firmware update).
 9. Wait until device is online again. Takes a few seconds
@@ -35,25 +35,28 @@ To recover a failed OTA convert, flashing Tasmota over a wired serial connection
 
 ## Supported Devices and OTA Links
 
-| **Device** | **Link** | **State** |
-|------|------|------|
-| **PlusHT** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusHT.zip`   |   :warning:**untested**   |
-| **PlusPlugS** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusPlugS.zip`   |   :white_check_mark:**tested**   |
-| **PlugIT** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlugIT.zip`   |   :warning:**untested**   |
-| **PlugUS** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlugUS.zip`   |   :warning:**untested**   |
-| **PlugUK** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlugUK.zip`   |   :warning:**untested**   |
-| **PlusI4** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusI4.zip`   |   :white_check_mark:**tested**   |
-| **PlusWallDimmer** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-PlusWallDimmer.zip`   |   :warning:**untested**   |
-| **Plus1PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus1PM.zip`   |   :white_check_mark:**tested**   |
-| **Plus1** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus1.zip`   |   :white_check_mark:**tested**   |
-| **Plus2PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Plus2PM.zip`   |   :white_check_mark:**tested**   |
-| **Pro1** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro1.zip`   |   :white_check_mark:**tested**   |
-| **Pro1PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro1PM.zip`   |   :white_check_mark:**tested**   |
-| **Pro2** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro2.zip`   |   :white_check_mark:**tested**   |
-| **Pro2PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro2PM.zip`   |   :white_check_mark:**tested**   |
-| **Pro3** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro3.zip`   |   :warning:**untested**   |
-| **Pro4PM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro4PM.zip`   |   :white_check_mark:**tested**   |
-| **Pro3EM** |   `http://ota.tasmota.com/tasmota32/shelly/mgos32-to-tasmota32-Pro3EM.zip`   |   :warning:**untested**   |
+| **Device** | **State** |
+|------|------|
+| **PlusHT** |   :warning:**untested**   |
+| **PlusPlugS** |   :white_check_mark:**tested**   |
+| **PlugIT** |   :warning:**untested**   |
+| **PlugUS** |   :warning:**untested**   |
+| **PlugUK** |   :warning:**untested**   |
+| **PlusI4** |   :white_check_mark:**tested**   |
+| **PlusWallDimmer** |   :warning:**untested**   |
+| **Plus1PM** |   :white_check_mark:**tested**   |
+| **Plus1**   |   :white_check_mark:**tested**   |
+| **Plus2PM** |   :white_check_mark:**tested**   |
+| **Pro1**   |   :white_check_mark:**tested**   |
+| **Pro1PM** |   :white_check_mark:**tested**   |
+| **Pro2**   |   :white_check_mark:**tested**   |
+| **Pro2PM** |   :white_check_mark:**tested**   |
+| **Pro3**   |   :warning:**untested**   |
+| **Pro4PM** |   :white_check_mark:**tested**   |
+| **Pro3EM** |   :warning:**untested**   |
+| **Plus1PMMini**  |   :white_check_mark:**tested**   |
+| **Plus1Mini**    |   :white_check_mark:**tested**   |
+| **PlusPMMini**   |   :white_check_mark:**tested**   |
 
 ##### Pro4PM is build with LVGL support
 
