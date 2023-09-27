@@ -25,7 +25,7 @@ To recover a failed convert, flashing Tasmota over a wired serial connection is 
 4. Device is updating, finished in 1-2 minutes
 5. If Shelly Web frontend is back after the update, repeat the steps above.
 6. The Web frontend does not react anymore now.
-7. Connect to the new opened Tasmota Wi-Fi access point and add the device to your Wi-Fi (full Internet access needed). 
+7. Connect to the new opened Tasmota Wi-Fi access point and add the device to your Wi-Fi (**full Internet access needed**). 
 ### ⚠️ NEEDED ⚠️ Convert to Tasmota Safeboot and update to latest Tasmota release
 8. Configure device using Tasmota Auto configuration. Select your device and hit enter. **This replaces the locked bootloader** (without this step device gets bricked with next firmware update).
 9. Wait until device is online again. Takes a few seconds
