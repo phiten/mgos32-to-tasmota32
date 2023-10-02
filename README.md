@@ -12,7 +12,7 @@ To recover a failed convert, flashing Tasmota over a wired serial connection is 
 
 ## Prerequisites
 
-1. ⚠️ Needed ⚠️ Update the Shelly device to the latest firmware 
+1. ⚠️ Needed ⚠️ Update the Shelly device to the latest stable firmware
 2. Download the name corresponding zip package for your device (See release section)
 
 ## Let’s start
