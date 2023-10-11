@@ -40,9 +40,8 @@ To recover a failed convert, flashing Tasmota over a wired serial connection is 
 | **PlusHT** |   :warning:**untested**   |
 | **PlusPlugS** |   :white_check_mark:**tested**   |
 | **PlusPlugUK** |   :white_check_mark:**tested**   |
-| **PlugIT** |   :warning:**untested**   |
-| **PlugUS** |   :warning:**untested**   |
-| **PlugUK** |   :warning:**untested**   |
+| **PlusPlugIT** |   :warning:**untested**   |
+| **PlusPlugUS** |   :warning:**untested**   |
 | **PlusI4** |   :white_check_mark:**tested**   |
 | **PlusWallDimmer** |   :warning:**untested**   |
 | **Plus1PM** |   :white_check_mark:**tested**   |
