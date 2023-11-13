@@ -3,7 +3,7 @@
 
 This guide explains how to convert Shelly ESP32 and ESP32-C3 driven devices to Tasmota (no other firmware!)
 
-## :warning: WARNING :warning:
+## :warning: WARNING Currently there are reports of failing converts, maybe changes in Shelly firmware :warning:
 
 **There is no way back to Shelly firmware if you have initiated the convert process!**
 
