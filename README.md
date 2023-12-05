@@ -3,7 +3,7 @@
 
 This guide explains how to convert Shelly ESP32 and ESP32-C3 driven devices to Tasmota (no other firmware!)
 
-**There is no way back to Shelly firmware if you have initiated the convert process!**
+## :warning: **There is no way back to Shelly firmware if you have initiated the convert process!**
 
 The convert workflow provides a safe update. However, it is a risky operation to overwrite the bootloader. If something unexpected happens, it will probably render the device inoperable until it is recovered.
 To recover a failed convert, flashing Tasmota over a wired serial connection is needed.
