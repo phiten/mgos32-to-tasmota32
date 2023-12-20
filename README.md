@@ -1,6 +1,6 @@
 
 # Shelly convert to Tasmota
-
+## ⚠️ Not working with newest Shelly firmware v1.10 ⚠️
 This guide explains how to convert Shelly ESP32 and ESP32-C3 driven devices to Tasmota (no other firmware!)
 
 ## :warning: **There is no way back to Shelly firmware if you have initiated the convert process!**
