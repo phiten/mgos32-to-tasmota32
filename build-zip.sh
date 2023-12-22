@@ -108,8 +108,8 @@ printf "\nDone mgos32-to-tasmota32-$shelly_device.zip\n\n"
 
 }
 
-ShellyMiniGen3=( Plus1PMMiniGen3 Plus1MiniGen3 )
-for i in "${ShellyMiniGen3[@]}"
+ShellyMiniG3=( Mini1PMG3 Mini1G3 )
+for i in "${ShellyMiniG3[@]}"
 do
     generatezip $i "tasmota32c3.bin" "fs-8MB-tasmota-C3.img" 3
 done
