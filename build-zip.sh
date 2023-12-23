@@ -26,7 +26,7 @@ then
   boot_file="bootloader-tasmota-c3.bin"
   boot_file_addr=0
   partition_file="C3_8MB_partition-table.bin"
-fi
+else
 if [[ $4 -eq 2 ]]
 then
   platform="esp32c3"
@@ -38,6 +38,7 @@ else
   boot_file="bootloader.bin"
   boot_file_addr=4096
   partition_file="partition-table.bin"
+fi
 fi
 
 #General:
@@ -108,7 +109,7 @@ printf "\nDone mgos32-to-tasmota32-$shelly_device.zip\n\n"
 
 }
 
-ShellyMiniG3=( Mini1PMG3 Mini1G3 )
+ShellyMiniG3=( Mini1PMG3 Mini1G3 MiniPMG3 )
 for i in "${ShellyMiniG3[@]}"
 do
     generatezip $i "tasmota32c3.bin" "fs-8MB-tasmota-C3.img" 3
